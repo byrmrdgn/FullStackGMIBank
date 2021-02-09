@@ -1,16 +1,16 @@
-package runner;
-
+package runners;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(
-        plugin = {"html:target//default-cucumber-reports"},
+@CucumberOptions (strict = true,
+        plugin = {"html:target/default-cucumber-reports"},
         features = "src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "",
-        dryRun = true
+        tags = "@RegistrationUnsuccessfull",
+        dryRun = false
+
 )
 public class Runner {
 }
